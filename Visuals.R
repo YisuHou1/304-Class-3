@@ -10,7 +10,7 @@ use_git_config(
 
 gitcreds_set()
 
-tibble(year = 1700:1988,
+sun <- tibble(year = 1700:1988,
        sunspots = as.numeric(datasets::sunspot.year) |> round(0)) |>
   ggplot(aes(x = sunspots)) +
   geom_histogram(fill = "#FF8000", color = "grey20") +
@@ -20,10 +20,10 @@ tibble(year = 1700:1988,
     y = "Year Count"
   )
 
+ggsave("sunspots_histogram.png", plot = sun, width = 8, height = 6, dpi = 300)
 
 
-
-ggplot(data = penguins,
+bad <- ggplot(data = penguins,
        aes(x = flipper_length_mm,
            y = body_mass_g)) +
   geom_point(aes(color = species,
@@ -55,5 +55,5 @@ ggplot(data = penguins,
   )
 
 
-
+ggsave("bad plot.png", plot = bad, width = 8, height = 6, dpi = 300)
 
