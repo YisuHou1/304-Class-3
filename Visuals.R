@@ -23,8 +23,8 @@ ggplot(data = penguins,
            y = body_mass_g)) +
   geom_point(aes(color = species,
                  shape = species),
-             size = 3,
-             alpha = 0.8) +
+             size = 31,
+             alpha = 0.67) +
   scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
   labs(
     title = "Penguin size, Palmer Station LTER",
@@ -32,14 +32,21 @@ ggplot(data = penguins,
     x = "Flipper length (mm)",
     y = "Body mass (g)",
     color = "Penguin species",
-    shape = "Penguin species"
+    shape = "Penguin species",
+    font = "Comic Sans"
   ) +
   theme_minimal() +
   theme(
     legend.position = c(0.2, 0.7),
     plot.title.position = "plot",
     plot.caption = element_text(hjust = 0, face = "italic"),
-    plot.caption.position = "plot"
+    plot.caption.position = "plot",
+    plot.title = element_text(size = 20),      # Change title font size
+    plot.subtitle = element_text(size = 15),   # Change subtitle font size
+    axis.title.x = element_text(size = 12),    # Change X axis title font size
+    axis.title.y = element_text(size = 12),    # Change Y axis title font size
+    axis.text.x = element_text(size = 10),     # Change X axis text font size
+    axis.text.y = element_text(size = 10)      # Change Y axis text font size
   )
 
 
