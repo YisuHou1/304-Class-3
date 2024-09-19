@@ -3,6 +3,13 @@ library(palmerpenguins)
 library(usethis)
 library(gitcreds)
 
+use_git_config(
+  user.name = "YisuHou1",
+  user.email = "yisu.hou@mail.utoronto.ca"
+)
+
+gitcreds_set()
+
 tibble(year = 1700:1988,
        sunspots = as.numeric(datasets::sunspot.year) |> round(0)) |>
   ggplot(aes(x = sunspots)) +
@@ -35,8 +42,6 @@ ggplot(data = penguins,
     plot.caption.position = "plot"
   )
 
-usethis::use_git()
-usethis::use_github()
 
 
 
