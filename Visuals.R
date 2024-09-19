@@ -13,7 +13,7 @@ gitcreds_set()
 tibble(year = 1700:1988,
        sunspots = as.numeric(datasets::sunspot.year) |> round(0)) |>
   ggplot(aes(x = sunspots)) +
-  geom_histogram()
+  geom_histogram(aes(color = "red""))
 
 
 
