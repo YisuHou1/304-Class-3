@@ -41,12 +41,12 @@ ggplot(data = penguins,
     plot.title.position = "plot",
     plot.caption = element_text(hjust = 0, face = "italic"),
     plot.caption.position = "plot",
-    plot.title = element_text(size = 20),      # Change title font size
-    plot.subtitle = element_text(size = 15),   # Change subtitle font size
-    axis.title.x = element_text(size = 12),    # Change X axis title font size
-    axis.title.y = element_text(size = 12),    # Change Y axis title font size
-    axis.text.x = element_text(size = 10),     # Change X axis text font size
-    axis.text.y = element_text(size = 10)      # Change Y axis text font size
+    plot.title = element_text(size = 100),      # Change title font size
+    plot.subtitle = element_text(size = 31),   # Change subtitle font size
+    axis.title.x = element_text(size = 28),    # Change X axis title font size
+    axis.title.y = element_text(size = 21),    # Change Y axis title font size
+    axis.text.x = element_text(size = 2),     # Change X axis text font size
+    axis.text.y = element_text(size = 100)      # Change Y axis text font size
   )
 
 
